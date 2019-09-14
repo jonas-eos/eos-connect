@@ -1,8 +1,21 @@
+/**
+ * @overview post list
+ * This file manipulate post list content
+ *
+ * @requires react
+ *
+ * @requires components/PostItem
+ */
 import React, { Component } from "react";
 
 import PostItem from "./PostItem";
 
 class PostList extends Component {
+  /**
+   * @state
+   *
+   * @static
+   */
   state = {
     posts: [
       {
@@ -83,6 +96,11 @@ class PostList extends Component {
     ]
   };
 
+  /**
+   * @render
+   *
+   * @return PostItem
+   */
   render() {
     const { posts } = this.state;
 
