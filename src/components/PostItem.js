@@ -29,30 +29,22 @@ function PostItem({ author, date, content, comments }) {
 function PostComments({ comments }) {
   return (
     <div className="post-comments">
-      <div className="line-separator">
-        {comments.map(comment => (
-          <div key={comment.id} className="comment">
-            <PostCommentHeader comment={comment} />
-            <p>{comment.content}</p>
-          </div> // comment
-        ))}
-      </div>
+      <div className="line-separator"></div>
+      {comments.map(comment => (
+        <div key={comment.id} className="comment">
+          <img
+            src={comment.author.avatar}
+            alt="Commenter's avatar"
+            className="avatar"
+          />
+          <p>
+            <span>{comment.author.name}</span>
+            {comment.content}
+          </p>
+        </div> // comment
+      ))}
       {/* line-separator */}
     </div> // post-comments
-  );
-}
-
-function PostCommentHeader({ comment }) {
-  const { author } = comment;
-  return (
-    <div className="post-comment-header">
-      <img
-        src={author.avatar}
-        alt="Commenter's avatar"
-        className="commenter-avatar"
-      />
-      <span>{author.name}</span>
-    </div> // post-comment-header
   );
 }
 
