@@ -1,3 +1,10 @@
+/**
+ * @overview Header
+ * This file manipulate the page header
+ *
+ * @requires react
+ * @requires fontawesome
+ */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIdCard } from "@fortawesome/free-solid-svg-icons";
