@@ -1,5 +1,22 @@
+/**
+ * @overview Post item
+ * This file manipulate all posts and comments.
+ *
+ * @requires react
+ */
 import React from "react";
 
+/**
+ * @method PostHeader
+ *
+ * @description
+ * This method show username, avatar and the post date.
+ *
+ * @param {object} author
+ * @param {object} date
+ *
+ * @return post header formatted
+ */
 function PostHeader({ author, date }) {
   const { name, avatar } = author;
   return (
@@ -14,6 +31,20 @@ function PostHeader({ author, date }) {
   );
 }
 
+/**
+ * @method PostItem
+ *
+ * @description
+ * This method show the post, and call other functions to show the reader and
+ * comments.
+ *
+ * @param {object} author
+ * @param {object} date
+ * @param {object} content
+ * @param {object} comments
+ *
+ * @return The post with header and comments
+ */
 function PostItem({ author, date, content, comments }) {
   {
     return (
@@ -26,6 +57,16 @@ function PostItem({ author, date, content, comments }) {
   }
 }
 
+/**
+ * @method PostComments
+ *
+ * @description
+ * This method shows all post comments, with author name and author avatar.
+ *
+ * @param {object comments}
+ *
+ * @return post comments
+ */
 function PostComments({ comments }) {
   return (
     <div className="post-comments">
