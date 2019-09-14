@@ -29,7 +29,13 @@ class PostList extends Component {
   render() {
     const { posts } = this.state;
     console.log(posts);
-    return <h1></h1>;
+    return (
+      <>
+        {posts.map(post => (
+          <p key={post.id}>{post.id}</p>
+        ))}
+      </>
+    );
   }
 }
 
