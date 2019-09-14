@@ -62,6 +62,8 @@ header nav.header-menu div.profile-div .faIdCard {
   margin-left: 8px;
 }
 
+/* #post-list content */
+
 .post-list {
   /* width: 700px; */
   width: 50%;
@@ -111,6 +113,8 @@ header nav.header-menu div.profile-div .faIdCard {
   margin-top: 15px;
   font-size: 16px;
 }
+
+/* Comments content */
 
 .post-comments {
   margin-top: 20px;
